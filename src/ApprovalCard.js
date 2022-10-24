@@ -13,3 +13,5 @@ const ApprovalCard = () => {
         </div>
     );
 };
+
+export default ApprovalCard;
