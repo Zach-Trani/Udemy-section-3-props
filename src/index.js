@@ -7,26 +7,26 @@ import ApprovalCard from './ApprovalCard';
 const App = () => {
     return (
         <div className="ui container comments">
-            <ApprovalCard>
+                {/* Here we pass a prop from the parent to a child component */}
+                <ApprovalCard />
                 <CommentDetail
-                    name="Ari"
-                    date="Today at 4:45PM"
+                    author="Ari"
+                    timeAgo="Today at 4:45PM"
                     text="Really inspiring"
                     avatar={faker.image.image()}
                 />
-            </ApprovalCard>
             
 
             <CommentDetail
-                name="Sam"
-                date="Today at 6:45PM"
+                author="Sam"
+                timeAgo="Today at 6:45PM"
                 text="I like this"
                 avatar={faker.image.image()}
             />
 
             <CommentDetail
-                name="Zach"
-                date="Today at 9:45PM"
+                author="Zach"
+                timeAgo="Today at 9:45PM"
                 text="Double like this"
                 avatar={faker.image.image()}
             />
