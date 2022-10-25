@@ -7,39 +7,38 @@ import ApprovalCard from './ApprovalCard';
 const App = () => {
     return (
         <div className="ui container comments">
-                {/* Here we pass a prop from the parent to a child component */}
-                <ApprovalCard />
+            {/* Wrap child comp in parent comp, child comp will show inside the child in props.children */}
+            <ApprovalCard>
+                {/* Passing CommentDetail component as a prop (configuring ApprovalCard compone–nt) */}
                 <CommentDetail
                     author="Ari"
                     timeAgo="Today at 4:45PM"
-                    text="Really inspiring"
+                    text="Amazing!"
                     avatar={faker.image.image()}
                 />
+            </ApprovalCard>
+
+            <ApprovalCard>
+                <CommentDetail
+                    author="Bob"
+                    timeAgo="Today at 6:45PM"
+                    text="I like this"
+                    avatar={faker.image.image()}
+                />
+            </ApprovalCard>
             
-
-            <CommentDetail
-                author="Sam"
-                timeAgo="Today at 6:45PM"
-                text="I like this"
-                avatar={faker.image.image()}
-            />
-
-            <CommentDetail
-                author="Zach"
-                timeAgo="Today at 9:45PM"
-                text="Double like this"
-                avatar={faker.image.image()}
-            />
+            <ApprovalCard>
+                <CommentDetail
+                    author="Zach"
+                    timeAgo="Today at 9:45PM"
+                    text="Double like this"
+                    avatar={faker.image.image()}
+                />
+            </ApprovalCard>
+            
 
         </div>
     );
 }
 
 ReactDOM.render(<App />, document.querySelector('#root'))
-
-// <link
-//  rel="stylesheet"
-//  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
-// />
-
-// https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css
