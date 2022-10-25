@@ -7,6 +7,13 @@ import ApprovalCard from './ApprovalCard';
 const App = () => {
     return (
         <div className="ui container comments">
+            <ApprovalCard>
+                <div>
+                    <h4>Warning!</h4>
+                    Are you sure you want to do this?
+                </div>
+            </ApprovalCard>
+
             {/* Wrap child comp in parent comp, child comp will show inside the child in props.children */}
             <ApprovalCard>
                 {/* Passing CommentDetail component as a prop (configuring ApprovalCard compone–nt) */}
@@ -26,7 +33,7 @@ const App = () => {
                     avatar={faker.image.image()}
                 />
             </ApprovalCard>
-            
+
             <ApprovalCard>
                 <CommentDetail
                     author="Zach"
@@ -35,8 +42,6 @@ const App = () => {
                     avatar={faker.image.image()}
                 />
             </ApprovalCard>
-            
-
         </div>
     );
 }
